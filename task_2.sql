@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS `authors_books` (
   `book_id` int(11) NOT NULL,
   `author_id` int(11) NOT NULL,
   UNIQUE KEY `uniq` (`book_id`,`author_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

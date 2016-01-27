@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS `authors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `books` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `authors_books` (
+  `book_id` int(11) NOT NULL,
+  `author_id` int(11) NOT NULL,
+  UNIQUE KEY `uniq` (`book_id`,`author_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
